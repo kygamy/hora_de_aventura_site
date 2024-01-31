@@ -1,4 +1,4 @@
-{% extends 'galeria/base.html' %}
+{% extends 'shared/base.html' %}
 {% load static %}
 {% block content %}
             <section class="conteudo">
@@ -12,7 +12,6 @@
                         <div class="imagem__info">
                             <div class="imagem__texto">
                                 <p class="imagem__titulo">{{fotografia.nome}}</p>
-                                <p class="imagem__descricao">{{fotografia.legenda}}</p>
                                 <p class="imagem__texto">{{fotografia.descricao}}</p>
                             </div>
                         </div>
