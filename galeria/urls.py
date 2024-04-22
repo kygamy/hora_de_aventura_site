@@ -1,6 +1,6 @@
 from django.urls import path
 from galeria.views import \
-    index, imagem, buscar, nova_imagem, editar_imagem, excluir_imagem
+    index, imagem, buscar, nova_imagem, editar_imagem, excluir_imagem, filtro
 
 urlpatterns = [
     path('', index, name='index'),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('nova-imagem', nova_imagem, name='nova_imagem'),
     path('editar-imagem', editar_imagem, name='editar_imagem'),
     path('excluir-imagem', excluir_imagem, name='excluir_imagem'),
+    path('filtro/<str:categoria>', filtro, name='filtro')
 ]

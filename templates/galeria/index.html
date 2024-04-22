@@ -12,10 +12,10 @@
                 <section class="tags">
                     <p class="tags__titulo">Busque por tags:</p>
                     <ul class="tags__lista">
-                        <li class="tags__tag">Humanos</li>
-                        <li class="tags__tag">Seres Mágicos</li>
-                        <li class="tags__tag">Galáxia</li>
-                        <li class="tags__tag">Planeta</li>
+                        <li class="tags__tag"><a href="{% url 'filtro' 'Humanos' %}" class="btn" style="color: aliceblue;">Humanos</a></li>
+                        <li class="tags__tag"><a href="{% url 'filtro' 'Seres Mágicos' %}"class="btn" style="color: aliceblue;">Seres Mágicos</a></li>
+                        <li class="tags__tag"><a href="{% url 'filtro' 'Seres das Trevas' %}"class="btn" style="color: aliceblue;">Seres das Trevas</a></li>
+                        <li class="tags__tag"><a href="{% url 'filtro' 'Divindades' %}"class="btn" style="color: aliceblue;">Divindades</a></li>
                     </ul>
                 </section>
                 <section class="galeria">
@@ -32,7 +32,7 @@
                                     <img class="card__imagem" src="{{ fotografia.foto.url }}" alt="foto">
                                 {% endif %}
                                 </a>
-                                <span class="card__tag">Estrelas</span>
+                                <span class="card__tag">{{fotografia.categoria}}</span>
                                 <div class="card__info">
                                     <p class="card__titulo">{{fotografia.nome}}</p>
                                     <div class="card__texto">

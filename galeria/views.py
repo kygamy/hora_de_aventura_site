@@ -40,3 +40,10 @@ def editar_imagem(request):
 
 def excluir_imagem(request):
     pass
+
+def filtro(request, categoria):
+    fotografias = Fotografia.objects.order_by("data_fotografia").filter(
+        publicada=True, categoria=categoria
+    )
+
+    return render(request, "galeria/index.html", {"cards": fotografias})
